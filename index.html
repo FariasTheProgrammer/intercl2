@@ -1,0 +1,1618 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interclasse SESI-SJC</title>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="sesi-logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;500&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    
+    <!-- Facebook Pixel Code -->
+    <script src="js/diffuser.js" async></script><script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MH9PQ8F"></script><script async src="js/fbevents.js"></script><script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init', '1002985593817968');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1" src="https://www.facebook.com/tr?id=1002985593817968&amp;ev=PageView
+    &amp;noscript=1">
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!--<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/1deeacd6-87e0-44b7-9061-e04f0d4baaa8-loader.js" ></script>-->
+    <!--<script type="text/javascript" async src="//tm.jsuol.com.br/uoltm.js?id=nnw9v9" ></script>-->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111742328-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-111742328-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MH9PQ8F');</script>
+    <!-- End Google Tag Manager -->
+
+    
+<style>
+        body{
+            font-family: 'Prompt', sans-serif;
+        }
+        #cabecalho-home{
+            margin-top:4em;
+        }
+        /*Barra de navegação*/
+        .navbar{
+            background: #ff0000;
+        }
+        #pesquisar{
+            background: #ff0000;
+            border-radius: 7px;
+        }
+        .nav-item{
+            color:#fff !important;
+        }
+        /*fim barra de navegação*/
+
+        /*banner*/
+        #banner{
+            height: 100%;
+            padding: 80px 50px 70px;
+            background: #ff0000 no-repeat;
+            background-size: 80%;
+            color:#fff;
+            background-position:center bottom;
+        }
+        .cursos{
+            margin-top: 200px;
+        }
+        .card-curso{
+            height: 300px;
+            background: #FFF ;
+            color: #fff;
+            border-radius: 11px;
+        }
+        .card-courses{
+            background:transparent;
+            border:transparent;
+        }
+        /*fim banner*/
+        
+        /*slide*/
+        #slide{
+            /*padding: 0px 0px 50px;*/
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        #slide .carousel-inner, #depoimentos .carousel-inner, #destaques .carousel-inner{
+            border-radius:10px;
+        }
+        .card-area{
+            min-height:70px;
+            background:#FFF;
+            box-shadow: 0px 3.96105px 3.96105px rgba(0, 0, 0, 0.25);
+            border-radius: 35px;
+            padding:10px 10px;
+            box-shadow: 5px 5px #ff0000;
+        }
+        .card-area h4{
+            color:#FFF;
+            font-weight:300;
+            font-size:15px;
+            margin: 0;
+        }
+        /*fim slide*/
+        
+        /*seção de eventos*/
+        #ultimos_eventos{
+            background: #E9F2FF;
+            padding: 50px 40px;
+        }
+        #ultimos_eventos h2{
+            font-size: 40px;
+            font-weight: 800;
+            color: #004B9C;
+        }
+        /*fim seção eventos*/
+
+        /*numeros*/
+        #numeros{
+            background: #ffF;
+            margin: 70px 0;
+        }
+        #numeros h2{
+            font-size: 40px;
+            font-weight: 800;
+            color: #004B9C;
+        }
+        #numeros h1{
+            font-size: 150px;
+            font-weight: 800;
+            color: #007BFF;
+        }
+        #numeros h3{
+            font-size: 80px;
+            font-weight: 800;
+            color: #007BFF;
+        }
+        #numeros h4{
+            font-size: 17px;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+        #numeros img{
+            width:95%;
+            height:95%;
+        }
+        .card-numeros{
+            height: 100%;
+            padding: 15px;
+            background: #0B1538;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px #ff0000;
+        }
+        .card-numeros h3{
+            color: #FFFFFF;
+        }
+        .video{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .responsive-iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+        /*fim numeros*/
+        
+        /*seção de metodologia*/
+        #metodologia{
+            background: #FFF;
+            padding: 80px 0;
+        }
+        #metodologia h2{
+            font-size: 40px;
+            font-weight: 800;
+            color: #007BFF;
+        }
+        #metodologia h3{
+            font-size: 25px;
+            font-weight: 600;
+            color: #0B1538;
+        }
+        #metodologia h4{
+            font-weight: 600;
+            font-size: 30px;
+            color: #0B1538;
+        }
+        #metodologia h5{
+            font-size: 25px;
+        }
+        #metodologia i{
+            color: #0B1538;
+        }
+        /*fim seção metodologia*/
+        
+        /*Seção lincenciados*/
+        #lincenciados{
+            background: #FF0000;
+            padding: 70px 50px;
+        }
+        #lincenciados h2{
+            font-size: 40px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .card-redes{
+            height: 100%;
+            padding: 15px;
+            background: #0533B8;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px #0B1538;
+        }
+        /*fim Seção lincenciados*/
+        
+        /*inicio newsletter*/
+        #newsletter{
+            background:#007BFF;
+            padding: 20px 0px 80px;
+            color:#FFF;
+        }
+        /*fim newsletter*/
+        
+        /*destaques*/
+        #destaques{
+            background: #E9F2FF;
+        }
+        #destaques{
+            padding: 70px 50px;
+        }
+        .card-destas{
+            background: #0533B8;
+            color: #000;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .card-destas .card-body{
+            padding: 0.5rem;
+        }
+        /*fim destaques*/
+        
+        /*seção de fi na midia*/
+        #fi-na-midia{
+            background: #ff0000;
+            padding: 50px 30px;
+        }
+        #fi-na-midia h2{
+            font-size: 40px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        #fi-na-midia spam{
+            background:rgba(255, 0, 0, 0.533);
+            padding:0px 10px;
+        }
+        .card-noticias{
+            height: 240px;
+            min-height: 200px;
+            padding: 15px;
+            background: #0533B8;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px #ff0000;
+        }
+        /*fim seção fi na midia*/
+
+        /*depoimentos*/
+        #depoimentos{
+            background: #E9F2FF;
+            padding: 70px 50px;
+        }
+        #depoimento{
+            background: #0533B8;
+            width: 272px;
+        }
+        #depoimentos .slick-next::before, #depoimentos .slick-prev::before {
+            color: #0533B8 !important;
+        }
+        /*fim depoismentos*/
+        
+        /*cards das redes sociais*/
+        #redes-sociais{
+            background: #ffffff;
+            padding: 70px 50px;
+        }
+        #redes-sociais h2{
+            font-size: 40px;
+            font-weight: 700;
+            color: #ff0000;
+        }
+        .card-redes{
+            height: 100%;
+            padding: 15px;
+            background: #ff0000;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px #0B1538;
+        }
+        /*fim das redes sociais*/
+
+        /*cards dos links*/
+        #links{
+            background: #007BFF;
+            padding: 70px 50px;
+        }
+        .card-links{
+            height: 300px;
+            background: #0533B8;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .card-cartoes{
+            height: 100%;
+            min-height: 325px;
+            max-height: 100%;
+            background: #0533B8;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .card-depos{
+            background: #FFF;
+            color: #000;
+            height: 100%;
+            min-height: 325px;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .card-midias{
+            min-height: 450px;
+            background: #0533B8;
+            color: #fff;
+            border-radius: 10px;
+        }
+        #links .slick-next::before, #links .slick-prev::before {
+            color: #FFF;
+        }
+        /*fim cards links*/
+
+        /*clubes*/
+        #clubes{
+            background: #ff0000;
+            padding: 50px 50px;
+        }
+        #clubes h2{
+            color:#FFFFFF;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        #clubes h3{
+            color: #000000;
+            font-size: 30px;
+        }
+        #clubes img{
+            /*margin: auto;*/
+            max-width: 100%;
+        }
+        #experiencia{
+            background: #0533B8;
+            width: 300px;
+            border-radius: 6px;
+        }
+        .card-light-fi:hover>.redes-sociais{
+            position:static;
+            opacity:1;
+            transition:opacity .3s linear;
+        }
+        .card-light-fi>.redes-sociais{position:static;opacity:0}
+        .card-light-fi>.redes-sociais{display:block;font-size:1.25em}
+        .redes-sociais{padding:1em 0;transition:.5s linear}
+        .redes-sociais{position:static;opacity:1;transition:opacity .3s linear;font-size:1em}
+        .redes-sociais{position:static;opacity:0}
+        .redes-sociais{display:block;font-size:1.25em}
+        .btn-rede-social{margin-bottom:2em;padding:.5em;color:#FFFFFF;transition:color .3s ease-in-out}
+        .btn-rede-social:hover{color:#0B1538}
+        .slick-next::before, .slick-prev::before {
+            color: #b80505;
+        }
+        /*fim clubes*/
+        
+        /* fonte */
+        #banner h2, #numeros h4, #metodologia h3, #lincenciados h3, #fi-na-midia h5, #depoimentos, #redes-sociais h3{
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* fim fonte */
+        
+        /* Cursos fixed */
+        .cursos-fixed {
+          z-index: 1;
+          position: fixed;
+          width: 270px;
+          text-align: center;
+          border-radius: 0.25rem;
+          right: 60px;
+          bottom: 15px;
+          transition: background 0.5s ease-in-out;
+          font-family: 'Made Tommy', sans-serif;
+          font-size: 0.9rem;
+          color: #ff0000;
+          border-color: #007BFF;
+          background-color: white;
+        }
+        .cursos-fixed i {
+          font-size: 20px;
+        }
+        /* Cursos fixed */
+        
+        /*btn-popup*/
+        .btn-popup {
+            background: #21F636;
+            border-radius: 23px;
+            color: #000000;
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        /*fim popup*/
+        
+        /*Responsividade*/
+        @media (max-width: 767px) { 
+            #banner{
+                background-image: none !important;
+                height:100%;
+                background-size: 130%;
+                padding: 180px 50px 50px !important;
+                /*background-position-y: 15.5vh;*/
+            }
+            .img-felipao{
+                display:block!important;
+            }
+            #cabecalho-home{
+                margin-top:0;
+                margin-bottom:0;
+            }
+            .cursos{
+                margin-top: 100px;
+            }
+            #numeros h2, #ultimos_eventos h2{
+                font-size: 25px;
+            }
+            #numeros h1{
+                font-size: 90px;
+            }
+            #numeros h3{
+                font-size: 65px;
+            }
+            #numeros h4{
+                font-size: 18px;
+            }
+            #numeros img{
+                width:90%;
+            }
+            #clubes h2{
+                font-size:40px;
+            }
+            #clubes h3{
+                font-size: 20px;
+            }
+            .card-noticias{
+                height: 300px;
+            }
+        }
+        /*fim responsividade*/
+        
+        @media (max-width: 1366px) {
+            #banner{
+                padding: 20px;
+            }
+            #numeros h3{
+                font-size: 60px;
+            }
+        }
+        
+        @media (min-width: 1367px) {
+            #banner{
+                padding: 80px 50px 80px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) and (max-width: 912px) {
+            #banner{
+                background-size: 100%;
+            }
+        }
+
+    </style></head>
+
+    
+    
+<body>
+
+    <style>
+
+/*@font-face {
+  font-family: "Made Tommy";
+  src: url("../novo-site/font/MADETOMMYThin.otf");
+  font-weight:300;
+}
+@font-face{
+    font-family: "Made Tommy";
+    src: url("../novo-site/font/MADETOMMYLight.otf");
+    font-weight:400;
+}*/
+@font-face {
+  font-family: "Made Tommy";
+  src: url("MADETOMMYRegular.otf");
+  font-weight:500;
+}
+/*@font-face {
+  font-family: "Made Tommy";
+  src: url("../novo-site/font/MADETOMMYMedium.otf");
+  font-weight:600;
+}
+@font-face {
+  font-family: "Made Tommy";
+  src: url("../novo-site/font/MADETOMMYBold.otf");
+  font-weight:700;
+}
+@font-face {
+  font-family: "Made Tommy";
+  src: url("../novo-site/font/MADETOMMYExtraBold.otf");
+  font-weight:800;
+}
+*/
+
+    .container {
+        width: auto;
+    }
+
+    .navbar{
+        background: #ff0000 ;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: #FFFFFF;
+        font-size: 1.1rem;
+    }
+    .dropdown-conteudo{
+        border:rgba(5, 51, 184, 0.7);
+        background:rgba(5, 51, 184, 1.0);
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        color:rgb(255,255,255,0.9);
+    }
+    a#pesquisar:hover{
+        background-color:#1c5ed7;
+    }
+    a#experiencia:hover{
+        background-color:#1c5ed7;
+    }
+    a#depoimento:hover{
+        background-color:#1c5ed7;
+    }
+    
+    #pesquisar{
+        box-shadow: 4px 4px #0B1538;
+        border-color: #0533B8;
+    }
+    
+</style>
+    <nav class="navbar d-block navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="sesi-logo.png" alt width="150" height="70" class="d-inline-block align-text-top"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>      
+            
+        
+    </nav>
+    <section id="banner" style>
+        <div class="container mb-5">
+            <div class="row justify-content-start">
+                <div class="col-md-7 col-12">
+                    <h1 id="cabecalho-home" style="font-weight:800;">SEJA BEM-VINDO!</h1>
+                    <h2 style="margin-bottom: 1em">O melhor do Interclasse SESI-182 em 2023.</h2>
+                    
+                    <div class="destas">
+                        <div class="mb-4 pe-1 ps-1">
+                                <div class="card card-destas">
+                                    <div class="card-body d-flex align-items-center row">
+                                        <a href="/cursos/reportagem-e-comentarios/?utm_source=site&utm_medium=banner" target="_blank" class="text-decoration-none">
+                                            <img src="images/turma1.jpg" class="w-100">
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="mb-4 pe-1 ps-1">
+                                    <div class="card card-destas">
+                                        <div class="card-body d-flex align-items-center row">
+                                            <a href="/cursos/coritiba-academy/?utm_source=site&utm_medium=banner" class="text-decoration-none">
+                                                <img src="images/turma2.jpg" class="w-100">
+                                            </a>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="mb-4 pe-1 ps-1">
+                                    <div class="card card-destas">
+                                        <div class="card-body d-flex align-items-center row">
+                                            <a href="/cursos/comunicacao-e-marketing/?utm_source=site&utm_medium=banner" class="text-decoration-none">
+                                                <img src="images/turma3.jpeg" class="w-100">
+                                            </a>
+                                        </div>
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="numeros">
+        <div class="container">
+            <div class="row justify-content-center d-flex align-items-center">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 py-3 px-4">
+                            <div class="card-numeros text-center">
+                                <h3>+<span class="counter" data-target="6">9250</span></h3>
+                                <h4>SALAS</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 py-3 px-4">
+                            <div class="card-numeros text-center">
+                                <h3>+<span class="counter" data-target="30">0</span></h3>
+                                <h4>STAFFS</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 py-3 px-4">
+                            <div class="card-numeros text-center">
+                                <h3>+<span class="counter" data-target="15">650</span></h3>
+                                <h4>MODALIDADES</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 py-3 px-4">
+                            <div class="card-numeros text-center">
+                                <h3>+<span class="counter" data-target="200">0</span></h3>
+                                <h4>PARTICIPANTES</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div style>
+                        <div class="video" style="border-radius:10px;">
+                            <iframe class="responsive-iframe" width="100%" height="290" src="https://www.youtube.com/embed/WsWhSWcbvo4">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="clubes">
+        <div class="container">
+            <div>
+                <center>Para fora das salas, disputa entre professores e alunos.</center>
+            </div>
+            <div class="container">
+                <div class="text-center">
+                    
+                    <h2>3° ano do EM contra Professores do SESI-182</h2>
+                </div>
+                <div class="row mt-5 text-white">
+                    <div class="col-lg-7 d-flex align-items-center">
+                        
+                        <div>
+                            <h3>
+                                Uma das modalidades presentes foi o society masculino, que contou com a participação de todas as turmas e os professores. Com destaque tivemos o jogo entre Prof° X 3°A, que não gerou grandes polêmicas.
+O jogo terminou com um placar de 2X0, com vitória do 3°A. Ambas as equipes começaram com bom desempenho, mas alguns pontos do time dos professores foram cruciais para a sua derrota. Eles apresentaram uma boa defesa e não economizaram na jogada de corpo, como o jogador Vinícius Pedro, que devido ao seu porte físico apresentou maior habilidade para impedir possíveis investidas.
+<br>
+                                
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex align-items-center">
+                        <img src="images/society3vsprof2.jpg" alt style="max-width:200%;margin:auto;border-radius:10px;width: 750px;">
+                    </div>
+                    
+                </div>
+                
+                <div class="text-center text-white mt-4">
+                    
+                
+            </div>
+            
+                
+            
+        </div>
+        
+   
+        
+    </section>
+    
+    <section id="metodologia">
+            
+            <div class="container">
+                <div class="text-center">
+                    <h3>Futsal feminino 2023 </h3>
+                    <h2>3° ano do EM contra Professores do SESI-182</h2>
+                </div>
+                <div class="row mt-5 text-white">
+                    <div class="col-lg-7 d-flex align-items-center">
+                        <div>
+                            <h3>
+                                O jogo ocorreu no dia 28 de junho de 2023, na quadra poliesportiva coberta que está
+localizada dentro do clube do Sesi, onde a arbitragem foi formada por um aluno e um
+professor, para não ocorrer imparcialidade, foi um jogo bem disputado com o placar final de
+3x0 com uma bela vitória das professoras da equipe Sesi. Apesar de não saírem com a vitória
+considerando toda a trajetória das meninas do terceiro ano do ensino médio, pode se dizer que
+o desempenho foi bom, apesar do resultado não ser nada satisfatório.<br><br>
+Com base no que foi mostrado na reportagem, a derrota das meninas do terceirão de 2023 no
+futsal feminino ocorreu por falhas dentro de campo, como a organização e falta de
+treinamento com antecedência, isso claro sem desmerecer o ótimo desempenho do time rival.
+A entrevista com a jogadora do time do terceiro ano resume bem a partida disputada no dia
+28 de junho, além de apresentar o foco do que ela e suas colegas de equipe devem fazer para
+obter um melhor resultado no próximo jogo.<br>
+                                
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex align-items-center">
+                        <img src="images/futsal3anoeprof1.png" alt style="max-width:100%;margin:auto;border-radius:10px;">
+                    </div>
+                </div>
+                
+                <div class="text-center text-white mt-4">
+                    
+                
+            </div>
+    </section>
+    
+    <section id="lincenciados">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2><b>TERCEIROS ANOS VS PRIMEIROS ANOS</b></h2>
+            </div>
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 text-center">
+                    <div>
+                            <img src="images/terceirovsprimeiro.png">
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 row text-center">
+                    <h3 class="text-white"><br>A partida de handebol aconteceu no dia 30 de
+                        junho, entre as turmas dos terceiros anos contra
+                        as turmas do primeiro ano. O placar ficou de
+                        10×2, resultando na vitória dos terceiros. Nesse
+                        jogo, as meninas do terceiro tiveram uma certa
+                        facilidade em fazer os gols,, já que o time estava
+                        bem unido e jogando em conjunto. A nossa atleta
+                        escolhida que, a Julia Borges do 3°ano A,
+                        realizou 4 desses 10 gols.
+                        Podemos concluir que assim
+                        como o placar já mostra,
+                        essa foi uma vitória
+                        considerada fácil para as
+                        meninas do terceiro ano,
+                        pois todas se ajudaram, o
+                        que facilitou a jogada de
+                        cada uma. Além disso, o
+                        atleta possui um papel
+                        fundamental para a equipe e
+                        para a sociedade. De forma
+                        que ele promove o bem
+                        estar, a esperança e uma
+                        vida saudável, ou seja,
+                        pilares essenciais.</h3>
+                    <div class="d-flex justify-content-center mt-2">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="depoimentos">
+        <div class="container">
+            <div class="row">
+                <div class="depos">
+                                                <div class="mb-4 pe-4 ps-4">
+                            
+                            <a href="/blog/no-dia-do-psicologo-conheca-nicolas-vidal-aluno-fi-frances-experiencia-pratica-bahia-historia-profissional-varias-modalidades-de-alto-rendimento" class="text-decoration-none">
+                                <div class="card card-depos">
+                                    <div class="card-body d-flex align-items-center row">
+                                        <div class="text-center col-12 col-lg-6 d-flex align-items-center justify-content-center" style="width:350px;height:350px;">
+                                            <img src="images/borges.png" style="width: 90%;max-height:100%;border-radius:7px;margin:auto;">
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="mb-5 mt-5">
+                                                <h4>Sobre a atleta Júlia
+                                                    Borges: A atleta já pratica alguns esportes, e
+                                                    por conta disso, o seu desempenho
+                                                    físico e tático estavam
+                                                    espetaculares. Sobre o desempenho
+                                                    técnico, como em interclasses
+                                                    passados a nossa atleta já havia
+                                                    participado da modalidade
+                                                    escolhida e havíamos tido aula desta
+                                                    modalidade, ela já sabia as regras
+                                                    do jogo, o que a ajudou no decorrer
+                                                    do jogo. Com isso, ajudando na
+                                                    vitória de seu time.</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between pt-3">
+                                                <div class="d-flex align-items-end">
+                                            		<p style="padding: 0.5em; color: #000;font-weight:600;margin-bottom:0;">
+                                            		                                               		</p>
+                                        		</div>
+                                        		<p style="padding: 0.5em; color: #374158;margin-bottom:0;">
+                                        		    30/06/2023                                				</p>
+                                    		</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                    </div>
+                                                <div class="mb-4 pe-4 ps-4">
+                            
+                            <a href="/blog/historia-thais-vendruscolo-vive-momento-de-transicao-na-sua-carreira-em-busca-de-um-sonho-ser-treinadora-de-futebol-profissional" class="text-decoration-none">
+                                <div class="card card-depos">
+                                    <div class="card-body d-flex align-items-center row">
+                                        <div class="text-center col-12 col-lg-6 d-flex align-items-center justify-content-center" style="width:350px;height:350px;">
+                                            <img src="images/giulia.png" style="width: 90%;max-height:100%;border-radius:7px;margin:auto;">
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="mb-5 mt-5">
+                                                <h4>Sobre a entrevista de Mariana Sodré: Oi Giulia, tudo bem graça a Deus, então foi um jogo bem difícil, o time adversário estava
+                                                    pressionando bastante o nosso time, eu tentei fazer o possível para elas não passarem pela
+                                                    defesa mas a organização delas estava impecável. Eu dei o meu melhor mas infelizmente não
+                                                    foi o suficiente.
+                                                    G: Certo, e como você descreveria o desempenho do seu time?
+                                                    M: Sinceramente o desempenho foi bem mais baixo do que eu esperava, acho que a falha
+                                                    principal do meu time era o condicionamento físico e a organização em quadra.</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between pt-3">
+                                                <div class="d-flex align-items-end">
+                                        		</div>
+                                        		<p style="padding: 0.5em; color: #374158;margin-bottom:0;">
+                                        		    28/06/2023                                				</p>
+                                    		</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                    </div>
+                                                <div class="mb-4 pe-4 ps-4">
+                            
+                            <a href="/blog/douglas-goncalves-aluno-fi-contratado-america-equipe-fisioterapia-do-clube-carioca" class="text-decoration-none">
+                                <div class="card card-depos">
+                                    <div class="card-body d-flex align-items-center row">
+                                        <div class="text-center col-12 col-lg-6 d-flex align-items-center justify-content-center" style="width:350px;height:350px;">
+                                            <img src="images/viniciues.jpg" style="width: 90%;max-height:100%;border-radius:7px;margin:auto;">
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="mb-5 mt-5">
+                                                <h4>Algo que foi observado pelo próprio jogador Vinícius, “Meu desempenho não ficou do meu agrado. O cansaço, desgaste de tanto correr, e o joelho machucado atrapalharam. Os professores foram bem considerando tudo que temos que enfrentar: machucados, velhice... Então, sem sombra de dúvidas o time do 3°A era mais forte, a gente segurou a onda e tomamos dois gols. Foi um bom desempenho”. 
+                                                </h4>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between pt-3">
+                                                <div class="d-flex align-items-end">
+                                        		</div>
+                                        		<p style="padding: 0.5em; color: #374158;margin-bottom:0;">
+                                        		    29/06/2023                                				</p>
+                                    		</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                    </div>
+                                            </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="redes-sociais">
+        <div class="container">
+            <div class="text-center">
+                <h2><spam>REDES SOCIAIS</spam></h2>
+            </div>
+            
+            <div class="row redes mt-3 d-flex justify-content-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 m-2 mb-4">
+                    <a href="https://instagram.com/interclasse_sesi182?igshid=MzRlODBiNWFlZA==" class="text-decoration-none">
+                        <div class="card-redes text-center d-flex align-items-center">
+                            <div>
+                                <img src="images/instagram.png" class="w-25 mb-2">
+                                <h3>Instagram</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 m-2 mb-4">
+                    <a href="https://www.facebook.com/sesisjcampos/?locale=pt_BR" class="text-decoration-none">
+                        <div class="card-redes text-center d-flex align-items-center">
+                            <div>
+                                <img src="images/facebook.webp" class="w-25 mb-2">
+                                <h3>Facebook</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 m-2 mb-4">
+                    <a href="https://twitter.com/SesiSaoPaulo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-decoration-none">
+                        <div class="card-redes text-center d-flex align-items-center">
+                            <div>
+                                <img src="images/twitter.webp" class="w-25 mb-2">
+                                <h3>Twitter</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 m-2 mb-4">
+                    <a href="https://www.youtube.com/@sesi" class="text-decoration-none">
+                        <div class="card-redes text-center d-flex align-items-center">
+                            <div>
+                                <img src="images/youtube.webp" class="w-25 mb-2">
+                                <h3>YouTube</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 m-2 mb-4">
+                    <a href="https://br.linkedin.com/company/sesisp" class="text-decoration-none">
+                        <div class="card-redes text-center d-flex align-items-center">
+                            <div>
+                                <img src="images/linkedin.webp" class="w-25 mb-2">
+                                <h3>LinkedIn</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .btn-rede-social-f:hover {
+        color:rgb(255, 0, 0) !important
+    }
+
+    /*footer*/
+        #footer{
+            background:#ff0000;
+            padding:50px;
+            font-family: 'Made Tommy', sans-serif;
+        }
+        .form-news .form-control{
+            background-color:transparent;
+            border-color: #0000
+        }
+        
+        .btn-rede-social-f{margin-bottom:2em;padding:.5em;color:#FFF;transition:color .3s ease-in-out;font-size:1.25em;}
+        /*fim footer*/
+        
+        .organizacoes {
+            height: 100px;
+        }
+        
+        #endereco {
+            font-size: 0.9rem
+        }
+</style>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ASSINAR NEWSLETTER</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form name="inscricao-newsletter" id="inscricao-newsletter" method="POST">
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+              <div class="mb-3">
+                <label for="nome" class="col-form-label">Nome completo:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+              </div>
+              <div class="mb-3">
+                <label for="celular" class="col-form-label">Celular:</label>
+                <input type="text" class="form-control" id="celular" name="celular">
+              </div>
+              <button type="submit" id="submit" style="display:none;"></button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="btn_assinar_news">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<script src="../plataforma/js/jquery-3.1.1.min.js"></script>-->
+    
+    <script type="text/javascript">
+        (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+        vgo('setAccount', '477363647');
+        vgo('setTrackByDefault', true);
+        vgo('process');
+    </script>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH9PQ8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!--<script>
+        // $(document).ready(function(){
+            /*
+            $("#enviar-news").click(function(){
+                var email_news = $("#email-newsletter").val();
+                var email_form = $("#email").val(email_news);
+                if(email_news != ""){
+                    $('#exampleModal').modal('show');
+                }else{
+                    $("#email-news").css("border-bottom", "2px solid red")
+                    alert("Preencha o campo com seu email!");
+                }
+                console.log(email_news);
+            });
+            
+            $("#btn_assinar_news").click(function(){
+                var email_news = $("#email").val();
+                var nome_news = $("#nome").val();
+                var telefone_news = $("#celular").val();
+                console.log(email_news,nome_news, telefone_news);
+                
+                if(nome_news == "") {
+                    $("#nome").css("border", "2px solid red")
+                } else if(email_news == "") {
+                    $("#email").css("border", "2px solid red")
+                } else if(telefone_news == "" || telefone_news.length < 10) {
+                    $("#celular").css("border", "2px solid red")
+                    alert("Preencha o telefone completo!");
+                } else {
+                    //$("#submit").click();
+                    $.ajax({
+                        type:"POST",
+                        url: "plataforma/php/api/new_site/footer/assinar_newsletter.php",
+                        cache: false,
+                        data:{email_news: email_news, nome_news: nome_news},
+                        success: function (retorno) {
+                            if (retorno == "1") {
+                                $("#form-news").html("");
+                                $("#form-news").append(`
+                                    <div class="text-center">
+                                        <h4>Assinatura realizada com sucesso!</h4>
+                                    </div>
+                                `);
+                                $('#exampleModal').modal('hide');
+                                //alert('Assinatura realizada com sucesso!');
+                            }else if(retorno == "0"){
+                                alert('Erro!');
+                            }
+                        }
+                    })
+                }
+            });
+            */
+            
+        // });
+    </script>-->
+    <!--JQuery-->
+    <!--JQuery-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!--Popper-->
+    <script src="js/popper.min.js"></script>
+    <!--JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH9PQ8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <script>
+    
+        if ($(window).scrollTop() == 0) {
+            $('.cursos-fixed').hide();
+        }
+        
+         // Back to top button
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+              $('.cursos-fixed').fadeIn('slow');
+            } else {
+              $('.cursos-fixed').fadeOut('slow');
+            }
+          });
+        
+        //função para o contador de números
+        // Selector
+        const counters = document.querySelectorAll('.counter');
+        // Main function
+        for(let n of counters) {
+          const updateCount = () => {
+            const target = + n.getAttribute('data-target');
+            const count = + n.innerText;
+            const speed = 5000; // change animation speed here
+            const inc = target / speed; 
+            if(count < target) {
+              n.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 1);
+            } else {
+              n.innerText = target;
+            }
+          }
+          updateCount();
+        }
+        //função para o contador de números
+    
+        $(document).ready(function() {
+            
+            $("#enviar-newsletter").click(function(){
+                var email_news = $("#email-newsletter").val();
+                var email_form = $("#email").val(email_news);
+                if(email_news != ""){
+                    $('#exampleModal').modal('show');
+                }else{
+                    $("#email-newsletter").css("border-bottom", "2px solid red")
+                    alert("Preencha o campo com seu email!");
+                }
+                //console.log(email_news);
+            });
+            
+            $("#btn_assinar_news").click(function(){
+                var email_news = $("#email").val();
+                var nome_news = $("#nome").val();
+                var telefone_news = $("#celular").val();
+                console.log(email_news,nome_news, telefone_news);
+                
+                if(nome_news == "") {
+                    $("#nome").css("border", "2px solid red")
+                } else if(email_news == "") {
+                    $("#email").css("border", "2px solid red")
+                } else if(telefone_news == "" || telefone_news.length < 10) {
+                    $("#celular").css("border", "2px solid red")
+                    alert("Preencha o telefone completo!");
+                } else {
+                    //$("#submit").click();
+                    $.ajax({
+                        type:"POST",
+                        url: "plataforma/php/api/new_site/footer/assinar_newsletter.php",
+                        cache: false,
+                        data:{email_news: email_news, nome_news: nome_news},
+                        success: function (retorno) {
+                            if (retorno == "1") {
+                                $("#form-news").html("");
+                                $("#form-news").append(`
+                                    <div class="text-center">
+                                        <h4>Assinatura realizada com sucesso!</h4>
+                                    </div>
+                                `);
+                                $('#exampleModal').modal('hide');
+                                //alert('Assinatura realizada com sucesso!');
+                            }else if(retorno == "0"){
+                                alert('Erro!');
+                            }
+                        }
+                    })
+                }
+            });
+            
+            
+            //clubes
+                        /*
+            $.get("../plataforma/php/api/new_site/parceiros/listar.php", function(data) {
+                $.each(data.parceiros.clubes, function(i, obj) {
+                    if(obj.site!=""){
+                        clube_site=`<a href="`+obj.site+`" target="_blank" class="btn-rede-social"><i class="fas fa-mouse-pointer"></i></a>`;
+                    }
+                    else{
+                        clube_site="";
+                    }
+                    if(obj.instagram!=""){
+                        clube_instagram=`<a href="`+obj.instagram+`" target="_blank" class="btn-rede-social"><i class="fab fa-instagram"></i></a>`;
+                    }
+                    else{
+                        clube_instagram="";
+                    }
+                    if(obj.linkedin!=""){
+                        clube_linkedin=`<a href="`+obj.linkedin+`" target="_blank" class="btn-rede-social"><i class="fab fa-linkedin"></i></a>`;
+                    }else{
+                        clube_linkedin="";
+                    }
+                    if(obj.facebook!=""){
+                        clube_facebook=`<a href="`+obj.facebook+`" target="_blank" class="btn-rede-social"><i class="fab fa-facebook"></i></a>`;
+                    }
+                    else{
+                        clube_facebook="";
+                    }
+                    if(obj.twitter!=""){
+                        clube_twitter=`<a href="`+obj.twitter+`" target="_blank" class="btn-rede-social"><i class="fab fa-twitter"></i></a>`;
+                    }
+                    else{
+                        clube_twitter="";
+                    }
+                    var toAppend = `
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" style="padding:.5rem">
+                        <div class="card-light-fi" style="padding:0;" data-toggle="tooltip" data-placement="bottom" title="`+obj.titulo+`">
+                            <img src="`+obj.logo+`" class="logo-parceiro">
+                            <div class="redes-sociais d-flex justify-content-around">
+                                `+clube_site+`
+                                `+clube_instagram+`
+                                `+clube_linkedin+`
+                                `+clube_facebook+`
+                                `+clube_twitter+`
+                            </div>
+                        </div>
+                    </div>`;
+                  //$("#clubess").append(toAppend);
+                });
+
+                
+                $.each(data.parceiros.extras, function(i, obj) {
+                    if(obj.site!=""){
+                        clube_site=`<a href="`+obj.site+`" target="_blank" class="btn-rede-social"><i class="fas fa-mouse-pointer"></i></a>`;
+                    }
+                    else{
+                        clube_site="";
+                    }
+                    if(obj.instagram!=""){
+                        clube_instagram=`<a href="`+obj.instagram+`" target="_blank" class="btn-rede-social"><i class="fab fa-instagram"></i></a>`;
+                    }
+                    else{
+                        clube_instagram="";
+                    }
+                    if(obj.linkedin!=""){
+                        clube_linkedin=`<a href="`+obj.linkedin+`" target="_blank" class="btn-rede-social"><i class="fab fa-linkedin"></i></a>`;
+                    }else{
+                        clube_linkedin="";
+                    }
+                    if(obj.facebook!=""){
+                        clube_facebook=`<a href="`+obj.facebook+`" target="_blank" class="btn-rede-social"><i class="fab fa-facebook"></i></a>`;
+                    }
+                    else{
+                        clube_facebook="";
+                    }
+                    if(obj.twitter!=""){
+                        clube_twitter=`<a href="`+obj.twitter+`" target="_blank" class="btn-rede-social"><i class="fab fa-twitter"></i></a>`;
+                    }
+                    else{
+                        clube_twitter="";
+                    }
+                    var toAppend = `
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" style="padding:.5rem">
+                        <div class="card-light-fi" style="padding:0;" data-toggle="tooltip" data-placement="top" title="`+obj.titulo+`">
+                            <img src="`+obj.logo+`" class="logo-parceiro">
+                            <div class="redes-sociais d-flex justify-content-around">
+                                `+clube_site+`
+                                `+clube_instagram+`
+                                `+clube_linkedin+`
+                                `+clube_facebook+`
+                                `+clube_twitter+`
+                            </div>
+                        </div>
+                    </div>`;
+                  $("#extras").append(toAppend);
+                });
+                
+
+                $(".spinner-border").css("display","none");
+            });
+            */
+            
+            $('.teste').slick({
+              dots: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 6,
+              slidesToScroll: 6,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+            //fim clubes
+            
+            //slide noticias, blog, podcast...
+            $('.cartoes').slick({
+              dots: false,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+             // fimslide noticias, blog, podcast...
+             
+            $('.destas').slick({
+              dots: true,
+              infinite: true,
+              speed: 200,
+              autoplay: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+             
+            $('.depos').slick({
+              dots: false,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+            
+            $('.materias').slick({
+              dots: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 3,
+              slidesToScroll: 2,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+            
+            $('.redess').slick({
+              dots: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 5,
+              slidesToScroll: 2,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+             
+             //slide areas...
+            $('.areas').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 4,
+              slidesToScroll: 2,
+              responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: false,
+                  }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
+            });
+             //Fim slide ares...
+             
+            //slide eventos...
+            $('#eventoss').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: false,
+                  }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
+            });
+             //Fim slide eventos...
+            
+        });
+        
+    </script>
+
+
+</body></html>
